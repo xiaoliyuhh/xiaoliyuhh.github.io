@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>jira_react项目要点 | 肖丽莹的博客</title><meta name="author" content="xiaoliying"><meta name="copyright" content="xiaoliying"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="配置文件public&#x2F;  manifest.json：pwd  robots.txt：让搜索引擎（搜索引擎爬虫）怎么对待 Disallow:&#x2F;secret         不允许搜索引擎访问什么页面   根目录  gitignore：告诉git忽略什么文件 package.json：每个前端项目的入口文件 readme.md tsconfig.json：配置typescript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jira_react项目要点">
+<meta property="og:url" content="http://example.com/2023/10/29/jira-react%E9%A1%B9%E7%9B%AE%E8%A6%81%E7%82%B9/index.html">
+<meta property="og:site_name" content="肖丽莹的博客">
+<meta property="og:description" content="配置文件public&#x2F;  manifest.json：pwd  robots.txt：让搜索引擎（搜索引擎爬虫）怎么对待 Disallow:&#x2F;secret         不允许搜索引擎访问什么页面   根目录  gitignore：告诉git忽略什么文件 package.json：每个前端项目的入口文件 readme.md tsconfig.json：配置typescript">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2023-10-28T22:40:24.000Z">
+<meta property="article:modified_time" content="2023-11-12T08:19:13.548Z">
+<meta property="article:author" content="xiaoliying">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/10/29/jira-react%E9%A1%B9%E7%9B%AE%E8%A6%81%E7%82%B9/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-12 16:19:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">肖丽莹的博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">jira_react项目要点</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-10-28T22:40:24.000Z" title="Created 2023-10-29 06:40:24">2023-10-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-11-12T08:19:13.548Z" title="Updated 2023-11-12 16:19:13">2023-11-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="jira_react项目要点"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>public&#x2F;</p>
+<ul>
+<li><p>manifest.json：pwd</p>
+</li>
+<li><p>robots.txt：让搜索引擎（搜索引擎爬虫）怎么对待</p>
+<p>Disallow:&#x2F;secret         不允许搜索引擎访问什么页面</p>
+</li>
+</ul>
+<p>根目录</p>
+<ul>
+<li>gitignore：告诉git忽略什么文件</li>
+<li>package.json：每个前端项目的入口文件</li>
+<li>readme.md</li>
+<li>tsconfig.json：配置typescript</li>
+<li>yarn.lock：锁定版本号，package.jason不能精确锁定版本号，只能锁定到版本号的倒数第一位或者第二位。</li>
+</ul>
+<p>注意：在源代码中使用的图片，字体，文件都要放在src中，容易产生误解要放在public。</p>
+<p>相对路径嵌套太多层可以配置当前目录使用绝对路径</p>
+<p>tsconfig.json：</p>
+<p>{</p>
+<p> “compilerOptions”: {</p>
+<p>  “baseUrl”: “.&#x2F;src”,</p>
+<p> 格式化工具：Prettier</p>
+<p><strong>一、Husky</strong></p>
+<p>Husky 是一款 <a target="_blank" rel="noopener" href="https://git-scm.com/docs/githooks">Git Hooks</a> 工具，可以在执行特定的 git 命令时（如: git commit, git push）触发对应的脚本</p>
+<p>安装: (当前版本 7.x)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm i -D husky</span><br><span class="line">$ npx husky install</span><br><span class="line">$ npm set-script prepare &quot;husky install&quot;</span><br></pre></td></tr></table></figure>
+
+<p>执行以上代码之后，项目的根目录会多出一个 <strong>.husky</strong> 文件夹，并且 package.json 中会增加一个脚本执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;prepare&quot;: &quot;husky install&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;&#x2F; prepare 会在每次 npm install 的时候执行</p>
+<p>现在 husky 已经安装好了，接下来添加对应的钩子函数</p>
+<p>比如我需要在每次 git commit 提交前执行某些操作，就可以添加一个 commit-msg 钩子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/commit-msg &#x27;npm test&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>然后 <strong>.husky</strong> 目录下就会增加一个 <strong>commit-msg</strong> 文件</p>
+<p><img src="C:\Users\xly\Desktop\MyBlog\source\images\jira-react项目要点\1059788-20220329150202043-444606293.png" alt="img"></p>
+<p>这样每一次 git commit 都会执行一次 <strong>npm test</strong></p>
+<p>&#x2F;&#x2F; 如果面临特殊情况，需要绕过 Git Hooks，可以使用 –no-verify </p>
+<p><strong>二、 Commitlint</strong></p>
+<p>Commitlint 可以校验 git commit message, 只有规范的 commit message 才能提交</p>
+<p>安装: (当前版本 16.x)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D @commitlint/&#123;config-conventional,cli&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在项目根目录新建一个 <strong>commitlint.config.js</strong> 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// commitlint.config.js</span><br><span class="line">module.exports = &#123; extends: [&#x27;@commitlint/config-conventional&#x27;] &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上一节已经在项目中引入了 Husky，修改一下 <strong>commit-msg</strong> 脚本，在每次 git commit 的时候执行 commitlint 校验</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/commit-msg &#x27;npx --no -- commitlint --edit $1&#x27;</span><br><span class="line"># or</span><br><span class="line">yarn husky add .husky/commit-msg &#x27;yarn commitlint --edit $1&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>不满足规则的提交会报错</p>
+<p>Commitlint 提交规范<br>commitlint 推荐我们使用 config-conventional 配置去写 commit</p>
+<p>提交格式（注意冒号后面有空格）<br>git commit -m <type>[optional scope]: <description></p>
+<p>type ：用于表明我们这次提交的改动类型，是新增了功能？还是修改了测试代码？又或者是更新了文档？ </p>
+<p>optional scope：一个可选的修改范围。用于标识此次提交主要涉及到代码中哪个模块。</p>
+<p>description：一句话描述此次提交的主要内容，做到言简意赅。</p>
+<p>常用的 type 类型</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>build</td>
+<td>编译相关的修改，例如发布版本、对项目构建或者依赖的改动</td>
+</tr>
+<tr>
+<td>chore</td>
+<td>其他修改, 比如改变构建流程、或者增加依赖库、工具等</td>
+</tr>
+<tr>
+<td>ci</td>
+<td>持续集成修改</td>
+</tr>
+<tr>
+<td>docs</td>
+<td>文档修改</td>
+</tr>
+<tr>
+<td>feat</td>
+<td>新特性、新功能</td>
+</tr>
+<tr>
+<td>fix</td>
+<td>修改bug</td>
+</tr>
+<tr>
+<td>perf</td>
+<td>优化相关，比如提升性能、体验</td>
+</tr>
+<tr>
+<td>refactor</td>
+<td>代码重构</td>
+</tr>
+<tr>
+<td>revert</td>
+<td>回滚到上一个版本</td>
+</tr>
+<tr>
+<td>style</td>
+<td>代码格式修改, 注意不是 css 修改</td>
+</tr>
+<tr>
+<td>test</td>
+<td>测试用例修改</td>
+</tr>
+</tbody></table>
+<p><strong>三、Lint-staged</strong></p>
+<p>在提交的代码的时候，可以通过 ESLint、Prettier 等工具来格式化代码</p>
+<p>但如果直接处理全部代码，首先是可能存在性能问题，其次是可能会修改掉别的同事的代码</p>
+<p>这时可以引入 lint-staged，它可以过滤出 Git 代码暂存区文件，这样就不会影响到未更改的文件</p>
+<p>安装: (当前版本 12.x)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D lint-staged</span><br></pre></td></tr></table></figure>
+
+<p>然后在项目根目录创建文件 <strong>.lintstagedrc</strong>，配置所需要的规则</p>
+<p>比如对暂存区的文件做格式化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;*.&#123;js,jsx,less,md,json&#125;&quot;: [</span><br><span class="line">    &quot;prettier --write&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;*.ts?(x)&quot;: [</span><br><span class="line">    &quot;prettier --parser=typescript --write&quot;,</span><br><span class="line">    &quot;eslint --quiet&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>甚至对特定文件执行脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;src/locales/zh-CN.ts&quot;: [</span><br><span class="line">    &quot;npm run your-command&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后通过 Husky 来执行 lint-staged</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/pre-commit &#x27;npx lint-staged&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>jsx中用map渲染的每一个列表都要有一个key</p>
+<p>jira-dev-tool：这个开发者工具用MSW以Service Worker为原理实现了“分布式后端”，即：所有请求被Service Worker代理。1.后端处理后，以localStorage为数据库进行增删改查。每个人都可以安装一个独立的后端服务和数据库，不用受任何中心化服务的影响。解决了服务脆弱，请求次数有限，不稳定，如果down了学员就没法使用以及学员对后端的数据库控制有限，如无法轻易的重置数据库。2.HTTP请求精准控制，最佳实践的项目，健壮性是一个被重点关注的点。这个开发者工具可以精准的控制HTTP的请求时间，失败概率，失败规则。可以对loading控制，对错误的控制。</p>
+<p>安装</p>
+<p>在public多了一个启动分布式服务必须的文件mockServiceWorker.js，将它加入到git中。</p>
+<h2 id="mock方案"><a href="#mock方案" class="headerlink" title="mock方案"></a>mock方案</h2><h3 id="json-server方案"><a href="#json-server方案" class="headerlink" title="json-server方案"></a>json-server方案</h3><p>1.全局安装：npm i json-server -g（全局安装的目的是在整个系统中使 <code>json-server</code> 命令可用，可以在任何目录中直接运行 <code>json-server</code>。</p>
+<p>2.加一个db.json作为我们mock的数据</p>
+<p>3.启动server：json-server –watch db.json</p>
+<p>4.把json-server嵌入到项目中</p>
+<ul>
+<li><p>yarn add json-server -D</p>
+</li>
+<li><p>再在根目录新建两个文件夹：<code>__json_sever_mock__</code></p>
+</li>
+<li><p>在文件夹<code>__json_sever_mock__</code>中建文件：db.json</p>
+</li>
+<li><p>把第2点加的db.json删掉</p>
+</li>
+<li><p>在package.json的scripts加： “json-server”:”json-server <strong>json_server_mock</strong>&#x2F;db.json –watch”</p>
+</li>
+<li><p>启动json-server：npm run json-server</p>
+</li>
+</ul>
+<p>如果地址name为空，不知是要找name为空的还是忽略名字，所以要写一个函数删除键为空的对象。在一个函数里，改变传入的对象是不好的，所以复制再改变返回复制后修改的。</p>
+<p>hook只能在其他hook或者组件中运行，不能在普通函数中运行。什么时候用函数，hook</p>
+<p>不在输入过程中多次发送请求，使用debounce</p>
+<p>d.ts是纯粹的说明书文件，给js打一个ts的补丁</p>
+<p>连接真实服务端，使用的是localStorage数据库</p>
+<p>开发者工具jira-dev-tool</p>
+<p>安装之前要确保git没有尚未提交的文件</p>
+<p>npm i imooc-jira-tool</p>
+<p>把启动分布式必须的文件右键mockServiceWork–&gt;git–&gt;add gitignore</p>
+<p>函数式编程中重要的pointfree消参</p>
+<p>即使登录成功后，但是后续所有的请求都是401，刷新又回到登录页面，这是因为token失效了，如何在登录状态时让每个请求都自动携带token去服务端来保持一个登录的状态</p>
+<p>用fetch抽象http请求方法，增强通用性</p>
+<p>fetch为什么要手动抛出异常而不能通过catch发送异常</p>
+<p>?:表示可选，如果有解构就不能用，可以给一个默认值，当有默认值就自动变为可选</p>
+<p>类型别名type在很多情况下可以和interface互换，但是在或的情况下无法替换</p>
+<p>interface也无法实现utility type，常用：Partial，Omit</p>
+<p>安装使用antd:yarn add antd</p>
+<p>import ‘antd&#x2F;dist&#x2F;antd.less’</p>
+<p>务必在jira-dev-tool后面引入</p>
+<p>如果要修改默认颜色，可以配置less变量来重新定义颜色，因为使用的是create-react-app，(antd官网看）要引入CRACO，安装craco，替换scripts中的react-scripts为craco…</p>
+<h2 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h2><p>在真实环境中，如果使用firebase这种第三方auth服务的话，本文件不需要开发者开发</p>
+<h2 id="useDebounce防抖"><a href="#useDebounce防抖" class="headerlink" title="useDebounce防抖"></a>useDebounce防抖</h2><h2 id="token要携带，抽象HTTP请求"><a href="#token要携带，抽象HTTP请求" class="headerlink" title="token要携带，抽象HTTP请求"></a>token要携带，抽象HTTP请求</h2><p>即使登录成功后，但是后续所有的请求都是401，刷新又回到登录页面，这是因为token失效了，如何在登录状态时让每个请求都自动携带token去服务端来保持一个登录的状态呢。</p>
+<p>把token参数要携带在header中，所以需要把token加在请求地址中。每次发异步请求都要加，所以封装一个函数。</p>
+<ul>
+<li>utility types 联合类型</li>
+</ul>
+<p>可以自定义类型别名type，Parameters只是类型别名中的一种，很多情况下可以和interface互换。</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">useHttp</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; user &#125; = <span class="title function_">useAuth</span>()</span><br><span class="line">    <span class="comment">//这里的typeof是js的，runtimes运行</span></span><br><span class="line">    <span class="keyword">const</span> a=<span class="keyword">typeof</span> user</span><br><span class="line">    <span class="comment">//这里的typeof是ts的，静态环境运行，提取变量类型，最后转换成js就不会有这个类型了，因为js是弱类型</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...[endpoint, config]: Parameters&lt;<span class="keyword">typeof</span> http&gt;</span>) =&gt;</span> <span class="title function_">http</span>(endpoint, &#123; ...config, <span class="attr">token</span>: user?.<span class="property">token</span> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>虽然?可以表示可选，但是有时我们并不想改变原来的类型（有可能是第三方库的变量），使用Partial这个utility type。Omit删除类型中的某些属性</p>
+<h3 id="fetch和axios"><a href="#fetch和axios" class="headerlink" title="fetch和axios"></a>fetch和axios</h3><p>服务端如果返回异常，fetch如果不手动抛出异常，fetch不会抛出异常（可以使用catch测试）</p>
+<p> 服务端如果返回异常，axios会抛出异常</p>
+<p>安装antd</p>
+<p>安装craco，覆盖create-react-app创建的默认配置</p>
+<h2 id="css-in-js"><a href="#css-in-js" class="headerlink" title="css in js"></a>css in js</h2><p>在 emotion 编写css， 若是发现代码没有高亮，则需要安装 vscode&#x2F;webstrom 插件:vscode styled-components插件</p>
+<p>create-react-app默认的就是用img渲染图片，使用svg渲染</p>
+<p>用方便的方式管理异步操作 custom hook </p>
+<p>抽象出users和projects的异步请求</p>
+<h2 id="异步函数与Promise"><a href="#异步函数与Promise" class="headerlink" title="异步函数与Promise"></a>异步函数与Promise</h2><p>同步和异步，为什么不能直接if(error)Error(error)而是要使用trycatch，因为如果同步代码执行了，但是异步代码还没执行,error还没获得正确值</p>
+<h2 id="错误边界"><a href="#错误边界" class="headerlink" title="错误边界"></a>错误边界</h2><p>错误边界的实现一定要用class component</p>
+<h2 id="改变文档标题"><a href="#改变文档标题" class="headerlink" title="改变文档标题"></a>改变文档标题</h2><p>方案一：使用react-helmet</p>
+<p>方案二：自定义hook</p>
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>:后面表示跟的是一个变量</p>
+<p>react-router和react-router-dom的关系类似于react和react-dom&#x2F;react-native&#x2F;react-vr…</p>
+<p>react是一个核心库，处理虚拟的计算的理论的逻辑，经过一系列的计算结果会被react-dom消费，react-dom在浏览器，react-native在客户端、ios消费</p>
+<p>react-router是可以运用在native环境中的。</p>
+<p>为什么Link是从react-router-dom中引入，因为Link的点击等操作是和浏览器强关联的</p>
+<p>在单页面应用（不能改变参数就重新刷新页面）中实现使用url来进行状态管理</p>
+<p>useMemo解决依赖循环问题：</p>
+<p>基本类型，可以放到依赖里；组件状态，可以放到依赖里；非组件状态的对象，绝不可以放到依赖里。</p>
+<h1 id="遇到的错误"><a href="#遇到的错误" class="headerlink" title="遇到的错误"></a>遇到的错误</h1><p>1.没有把暂存区的代码先提交就下载了jira-dev-tool，导致不能正常的使用jira-dev-tool工具。</p>
+<p>为什么：工具可能在安装过程中生成配置文件，用于指定特定的设置或行为。如果暂存区有未提交的更改，可能会影响配置文件的生成，导致工具无法正确设置。</p>
+<p>2.logout不应传参</p>
+<p>3.设置可选参数，使用Parameters来读取类型定义，否则不能成功设置可选</p>
+<p>4.使用命令安装完antd，报错显示找不到antd.less文件，移除antd，安装更低版本的yarn add antd@^4.24.2</p>
+<p>数据在哪？</p>
+<p>5.闭包陷阱</p>
+<p>useEffect中遇到闭包问题，需要检查依赖项是否设置正确</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xiaoliying</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/10/29/jira-react%E9%A1%B9%E7%9B%AE%E8%A6%81%E7%82%B9/">http://example.com/2023/10/29/jira-react%E9%A1%B9%E7%9B%AE%E8%A6%81%E7%82%B9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/10/20/react/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">react</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">xiaoliying</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mock%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">mock方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#json-server%E6%96%B9%E6%A1%88"><span class="toc-number">2.1.</span> <span class="toc-text">json-server方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JWT"><span class="toc-number">3.</span> <span class="toc-text">JWT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#useDebounce%E9%98%B2%E6%8A%96"><span class="toc-number">4.</span> <span class="toc-text">useDebounce防抖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#token%E8%A6%81%E6%90%BA%E5%B8%A6%EF%BC%8C%E6%8A%BD%E8%B1%A1HTTP%E8%AF%B7%E6%B1%82"><span class="toc-number">5.</span> <span class="toc-text">token要携带，抽象HTTP请求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fetch%E5%92%8Caxios"><span class="toc-number">5.1.</span> <span class="toc-text">fetch和axios</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css-in-js"><span class="toc-number">6.</span> <span class="toc-text">css in js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E4%B8%8EPromise"><span class="toc-number">7.</span> <span class="toc-text">异步函数与Promise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E8%BE%B9%E7%95%8C"><span class="toc-number">8.</span> <span class="toc-text">错误边界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9%E5%8F%98%E6%96%87%E6%A1%A3%E6%A0%87%E9%A2%98"><span class="toc-number">9.</span> <span class="toc-text">改变文档标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1"><span class="toc-number">10.</span> <span class="toc-text">路由</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-number"></span> <span class="toc-text">遇到的错误</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/10/29/jira-react%E9%A1%B9%E7%9B%AE%E8%A6%81%E7%82%B9/" title="jira_react项目要点"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="jira_react项目要点"/></a><div class="content"><a class="title" href="/2023/10/29/jira-react%E9%A1%B9%E7%9B%AE%E8%A6%81%E7%82%B9/" title="jira_react项目要点">jira_react项目要点</a><time datetime="2023-10-28T22:40:24.000Z" title="Created 2023-10-29 06:40:24">2023-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/20/react/" title="react"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="react"/></a><div class="content"><a class="title" href="/2023/10/20/react/" title="react">react</a><time datetime="2023-10-20T07:26:42.000Z" title="Created 2023-10-20 15:26:42">2023-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/19/project-summary/" title="project summary"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="project summary"/></a><div class="content"><a class="title" href="/2023/10/19/project-summary/" title="project summary">project summary</a><time datetime="2023-10-19T01:21:29.000Z" title="Created 2023-10-19 09:21:29">2023-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/07/data-structures-and-algorithms/" title="No title"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2023/10/07/data-structures-and-algorithms/" title="No title">No title</a><time datetime="2023-10-07T04:48:44.267Z" title="Created 2023-10-07 12:48:44">2023-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/06/js%E7%BA%A2%E5%AE%9D%E4%B9%A6/" title="js红宝书"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="js红宝书"/></a><div class="content"><a class="title" href="/2023/10/06/js%E7%BA%A2%E5%AE%9D%E4%B9%A6/" title="js红宝书">js红宝书</a><time datetime="2023-10-06T06:15:45.000Z" title="Created 2023-10-06 14:15:45">2023-10-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By xiaoliying</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
